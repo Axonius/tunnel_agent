@@ -2,6 +2,8 @@ The Dockerfile of the axonius/tunnel image, not supposed to ever change.
 
 Running it supposed to be as follows:
 	`docker run -d --net=host --privileged --name axonius_tunnel axonius/tunnel`
+	OR
+	`docker run -d --net=host --cap-add=NET_ADMIN --name axonius_tunnel axonius/tunnel`
 
 Example K9S yaml:
 
