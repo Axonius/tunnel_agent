@@ -3,7 +3,7 @@ The Dockerfile of the axonius/tunnel image, not supposed to ever change.
 Running it supposed to be as follows:
 	`docker run -d --net=host --privileged --name axonius_tunnel axonius/tunnel`
 
-Example K9S yaml:
+Example K8S yaml:
 
     apiVersion: v1
 	kind: Pod
