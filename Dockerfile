@@ -2,6 +2,7 @@
 FROM alpine:3.11.6
 
 RUN sed -i 's/http/https/g' /etc/apk/repositories
+RUN apk upgrade
 RUN apk add --no-cache openvpn curl bind-tools vim alpine-sdk linux-headers curl iptables iptables-dev tcptraceroute bash dnsmasq
 
 RUN mkdir /conf
