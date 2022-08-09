@@ -1,9 +1,8 @@
 # Dockerfile for axonius/tunnel image (Customer need to pass ovpn config file as base64 in OVPN_CONF env variable)
-FROM alpine:3.11.6
+FROM alpine:3.16.2
 
-RUN sed -i 's/http/https/g' /etc/apk/repositories
 RUN apk upgrade
-RUN apk add --no-cache openvpn curl bind-tools vim alpine-sdk linux-headers curl iptables iptables-dev tcptraceroute bash dnsmasq
+RUN apk add --no-cache openvpn curl bind-tools vim alpine-sdk linux-headers curl iptables iptables-dev tcptraceroute bash dnsmasq sudo
 
 RUN adduser -H -D axonius
 RUN adduser -H -D axonius_admin
