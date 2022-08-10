@@ -5,7 +5,7 @@ Running it supposed to be as follows:
 	OR
 	`docker run -d --net=host --cap-add=NET_ADMIN --name axonius_tunnel axonius/tunnel`
 
-Example K9S yaml:
+Example K8S yaml:
 
     apiVersion: v1
 	kind: Pod
