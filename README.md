@@ -3,7 +3,7 @@ The Dockerfile of the axonius/tunnel image, not supposed to ever change.
 Running it supposed to be as follows:
 	`docker run -d -e PROXY_USERNAME="{proxy_username}" -e PROXY_ENABLED="{proxy_enabled}" -e PROXY_ADDR="{proxy_addr}" -e PROXY_PORT="{proxy_port}" -e PROXY_PASSWORD="{proxy_password}"  -e OVPN_CONF=$(cat $PWD/conf/user.ovpn | base64 -w0)--net=host --privileged --name axonius_tunnel axonius/tunnel`
 	OR
-	`docker run -d -e PROXY_USERNAME="{proxy_username}" -e PROXY_ENABLED="{proxy_enabled}" -e PROXY_ADDR="{proxy_addr}" -e PROXY_PORT="{proxy_port}" -e PROXY_PASSWORD="{proxy_password}"  -e OVPN_CONF=$(cat $PWD/conf/user.ovpn | base64 -w0)--net=host --name axonius_tunnel axonius/tunnel`
+	`docker run -d -e PROXY_USERNAME="{proxy_username}" -e PROXY_ENABLED="{proxy_enabled}" -e PROXY_ADDR="{proxy_addr}" -e PROXY_PORT="{proxy_port}" -e PROXY_PASSWORD="{proxy_password}"  -e OVPN_CONF=$(cat $PWD/conf/user.ovpn | base64 -w0) --net=host --name axonius_tunnel axonius/tunnel`
 
 Example K8S yaml:
 
